@@ -75,7 +75,7 @@
                     <button type="submit" id="save_usuario" class="btn btn-success btn-lg"><span
                             class="glyphicon glyphicon-saved"> </span> Guardar </button>
 
-                    <button style="display:none" type="submit" name="actualizar" id="editar_usuario"
+                    <button style="display:none" type="submit" name="editar_usuario" id="editar_usuario"
                         class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-edit"> </span> Editar</button>
                 </div>
             </div>
@@ -115,8 +115,7 @@
 
                         <td>
                             <button data-cod_usuario="{$usuario.cod_usuario}" class="btn btn-primary actualizar"><span
-                                    class="glyphicon glyphicon-pencil"></span></button>
-                            
+                                    class="glyphicon glyphicon-pencil"></span></button>                            
 
                         </td>
 

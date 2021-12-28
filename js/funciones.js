@@ -31,6 +31,41 @@ $("#form_registrar").on("submit", function (e) {
     });
   });
 
+  //Lista una persona para Actualizar
+$(".actualizar").click(function(){
+
+  var cod_usuario= $(this).data("cod_usuario");
+
+  cadena = "cod_usuario=" + cod_usuario;
+
+  $.ajax({
+      type:"POST",
+      url: "listarUsuarioEditar.php",
+      data:cadena,
+      success: function(data){
+
+          if(data != "error"){
+
+            var datos = JSON.parse(data);
+
+            $("#cod_usuario").val(datos.cod_usuario);
+            $("#user").val(datos.user);
+            $("#nombre").val(datos.nombre);
+            $("#email").val(datos.email);
+          }
+      }
+
+  })
+});
+
+
+
+//Manejo de botones Gestionar Usuarios
+
+$(".actualizar").on("click", function () {
+  $("#editar_usuario").show();
+  $("#save_usuario").hide();
+});
 
 
 //Sweet alert para guardar

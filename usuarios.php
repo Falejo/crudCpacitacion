@@ -23,9 +23,29 @@
             }        
             exit();
 
-        } 
+        } else if(isset($_POST['cod_usuario'])){
 
+            $cod_usuario = $_POST['cod_usuario'];
+            $user = $_POST['user'];
+            $nombre = $_POST['nombre'];
+            $email = $_POST['email'];
 
+            $query = "UPDATE usuario set user = '$user', nombre = '$nombre', email= '$email' where cod_usuario = $cod_usuario";
+            $result = mysqli_query($conexion,$query);
+
+            if(!$result){
+                
+                $arr = array("resultado" => 0 , "mensaje" => "Error en la Inserción" );
+                echo json_encode($arr);
+            } else {
+                
+                $arr = array("resultado" => 1 , "mensaje" => "Datos actualizados con éxito" );
+                echo json_encode($arr);
+            }
+
+            exit();
+
+        }
 
 
         //Lista usuarios en la tabla
