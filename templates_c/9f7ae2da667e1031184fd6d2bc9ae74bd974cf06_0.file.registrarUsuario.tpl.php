@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.39, created on 2021-12-30 00:08:48
+  from 'C:\xampp\htdocs\capacitacion\vista\templates\registrarUsuario.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.39',
+  'unifunc' => 'content_61ccea80402b95_52007247',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9f7ae2da667e1031184fd6d2bc9ae74bd974cf06' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\capacitacion\\vista\\templates\\registrarUsuario.tpl',
+      1 => 1640819301,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_61ccea80402b95_52007247 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -101,27 +124,40 @@
                 </tr>
             </thead>
             <tbody>
-                {foreach from=$usuarios item=usuario}
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['usuarios']->value, 'usuario');
+$_smarty_tpl->tpl_vars['usuario']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
+$_smarty_tpl->tpl_vars['usuario']->do_else = false;
+?>
 
                     <tr>
 
-                        <td>{$usuario.cod_usuario}</td>
-                        <td>{$usuario.user}</td>
-                        <td>{$usuario.nombre}</td>
-                        <td>{$usuario.email}</td>
-                        <td>{$usuario.cod_perfil}</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['cod_usuario'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['user'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['nombre'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['email'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['cod_perfil'];?>
+</td>
                         
 
 
                         <td>
-                            <button data-cod_usuario="{$usuario.cod_usuario}" class="btn btn-primary actualizar"><span
+                            <button data-cod_usuario="<?php echo $_smarty_tpl->tpl_vars['usuario']->value['cod_usuario'];?>
+" class="btn btn-primary actualizar"><span
                                     class="glyphicon glyphicon-pencil"></span></button>                            
 
                         </td>
 
                     </tr>
 
-                {/foreach}
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </tbody>
         </table>
@@ -133,10 +169,22 @@
 
 
 
-<script src="librerias/js/jquery.js"> </script>
-<script src="librerias/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="librerias/DataTables/datatables.min.js"> </script>
-<script src="js/funciones.js"> </script>
-<script src="librerias/pluginSweet/SweetAlert/dist/sweetalert2.all.min.js"></script>
+<?php echo '<script'; ?>
+ src="librerias/js/jquery.js"> <?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="librerias/js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript" src="librerias/DataTables/datatables.min.js"> <?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="controlador/js/funciones.js"> <?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="librerias/pluginSweet/SweetAlert/dist/sweetalert2.all.min.js"><?php echo '</script'; ?>
+>
 
 
+<?php }
+}

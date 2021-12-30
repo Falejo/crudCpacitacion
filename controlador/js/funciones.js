@@ -9,7 +9,7 @@ $("#form_registrar").on("submit", function (e) {
 
     $.ajax({
       type: "POST",
-      url: "usuarios.php",
+      url: "index.php",
       data: datos,
 
       success: function (data) {
@@ -32,11 +32,12 @@ $("#form_registrar").on("submit", function (e) {
   });
 
   //Lista una persona para Actualizar
-$(".actualizar").click(function(){
+$(".actualizar").click( function(){
 
   var cod_usuario= $(this).data("cod_usuario");
 
   cadena = "cod_usuario=" + cod_usuario;
+  console.log(cadena);
 
   $.ajax({
       type:"POST",
