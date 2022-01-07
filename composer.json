@@ -1,0 +1,14 @@
+{
+    "name": "fabio/capacitacion",
+    "description": "Crud capacitacion",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "components/jqueryui": "dev-master",
+        "datatables/datatables": "dev-master",
+        "twbs/bootstrap": "3.4.1",
+        "adodb/adodb-php": "dev-master",
+        "smarty/smarty": "4.0.x-dev"
+    }
+}
