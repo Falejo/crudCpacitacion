@@ -9,6 +9,7 @@
         "datatables/datatables": "dev-master",
         "twbs/bootstrap": "3.4.1",
         "adodb/adodb-php": "dev-master",
-        "smarty/smarty": "4.0.x-dev"
+        "smarty/smarty": "4.0.x-dev",
+        "slim/slim": "3.0"
     }
 }

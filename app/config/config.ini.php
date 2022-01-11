@@ -3,6 +3,8 @@
 require_once('./vendor/smarty/smarty/libs/Smarty.class.php');
 require("./vendor/adodb/adodb-php/adodb.inc.php");
 
+
+
 $smarty = new smarty;
 
 

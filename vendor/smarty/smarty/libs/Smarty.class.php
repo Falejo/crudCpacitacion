@@ -98,7 +98,7 @@ class Smarty extends Smarty_Internal_TemplateBase
     /**
      * smarty version
      */
-    const SMARTY_VERSION = '4.0.0';
+    const SMARTY_VERSION = '4.0.3';
     /**
      * define variable scopes
      */
@@ -574,7 +574,7 @@ class Smarty extends Smarty_Internal_TemplateBase
      *
      * @var array
      */
-    protected $template_dir = array('./app/vista/templates/');
+    protected $template_dir = array('./templates/');
 
     /**
      * flags for normalized template directory entries

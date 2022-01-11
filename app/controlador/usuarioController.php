@@ -1,7 +1,6 @@
 <?php
 
 include("./app/modelo/usuarioClass.php");
-include("./app/config/config.ini.php");
 
 class UsuarioController
 {
@@ -57,6 +56,8 @@ class UsuarioController
     {
 
         $resultado = $this->usuarioModel->actualizarUsuario($user, $nombre, $email, $cod_usuario);
+       
+        //echo $resultado;
 
         if (!$resultado) {
 

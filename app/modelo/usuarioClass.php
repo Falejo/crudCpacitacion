@@ -21,7 +21,7 @@ class Usuario
     public function agregar($user, $nombre, $email)
     {
 
-        $resultado = $this->conexion->query("INSERT INTO usuario (user, nombre, fecha_vencimiento, cod_cargo, email) 
+        $resultado = $this->conexion->Execute("INSERT INTO usuario (user, nombre, fecha_vencimiento, cod_cargo, email) 
         VALUES ('$user', '$nombre', NULL, NULL, '$email')");
 
         return $resultado;
